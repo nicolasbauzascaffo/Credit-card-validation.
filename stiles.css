@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.grid-container > * {
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "sidebar" 40%
+    "main" auto;
+}
+
+@media (min-width: 990px) {
+  .grid-container {
+    grid-template:
+      "sidebar main" 100%/
+      27% auto;
+  }
+}
+
+/*Propiedades para video de fondo de #main*/
+
+#video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("./img/video.mov") no-repeat;
+  background-size: cover;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(198, 209, 214);
+  background: linear-gradient(
+    25deg,
+    rgba(198, 209, 214, 1) 0%,
+    rgb(73, 72, 72) 100%
+  );
+  padding: 30px;
+}
+
+#main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("./img/video.mov") no-repeat;
+  background-size: cover;
+  padding: 30px;
+}
+
+#tarjeta {
+  width: 340px;
+  height: 220px;
+  background-color: #ddd;
+  color: white;
+  position: absolute;
+  top: auto;
+  left: auto;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  background-image: url(./img/fondo\ tarjeta.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  font-size: 10px;
+  gap: 20px;
+  font-family: "Oxanium", cursive;
+  letter-spacing: 2px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#tarjeta.flipped {
+  transform: rotateY(180deg);
+  transition-duration: 1.2s;
+}
+
+.tarjeta-atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-image: url(./img/fondo\ tarjeta.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  font-family: "Oxanium", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
+}
+
+#fecha,
+#card-cvc {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+#card-cvc {
+  background-color: white;
+  color: black;
+  padding-left: 5px;
+}
+
+.datos-tarjeta {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 30px;
+}
+
+#logo-1 {
+  width: 100px;
+}
+
+#card-number,
+#card-name {
+  height: 30px;
+}
+
+.card-number {
+  justify-content: center;
+}
+
+.fecha {
+  display: flex;
+  flex-direction: row;
+}
+
+#magnetic-line {
+  width: 90%;
+  height: 30px;
+  background-color: black;
+  padding: 0;
+}
+
+form {
+  font-family: "Oxanium", cursive;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 320px;
+  height: 450px;
+  background-color: rgb(238, 238, 240);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#logo-visa {
+  width: 100px;
+}
+
+.form-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.ls {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ls input {
+  width: 100px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-family: "Oxanium", cursive;
+}
+
+input:focus {
+  outline: none;
+}
+
+.lss {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: auto;
+}
+
+.lss input {
+  width: 60px;
+}
+
+button {
+  text-align: center;
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  letter-spacing: 1px;
+  background-color: rgb(43, 120, 192);
+  color: white;
+  font-family: "Oxanium", cursive;
+  font-weight: 600;
+}
+
+button:hover {
+  color: black;
+  background-color: rgb(80, 202, 50);
+  cursor: pointer;
+  transition-duration: 0.7s;
+}
+
+/*Clases*/
+
+.red {
+  border: solid 2px red;
+}
+
+.green {
+  border: solid 2px green;
+}

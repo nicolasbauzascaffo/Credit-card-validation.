@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stiles.css">
+    <title>Tarjeta</title>
+</head>
+
+<body class="grid-container">
+    <div id="sidebar">
+        <div id="tarjeta">
+            <div class="datos-tarjeta">
+                <img id="logo" src="/img/contacto.png" alt="">
+                <img id="logo" src="img/visa-logo-card.png" alt="">
+            </div>
+            <div class="datos-tarjeta card-number">
+                <h1 id="card-number">0000000000000000</h1>
+            </div>
+            <div class="datos-tarjeta">
+                <h1 id="card-name">Name</h1>
+            </div>
+            <div class="datos-tarjeta" id="fecha">
+                <h4>Exp.date:</h4>
+                <h4 id="card-month">01</h4>/<h4 id="card-year">2025</h4>
+            </div>
+
+            <div class="tarjeta-atras">
+                <img id="logo-1" src="img/visa-logo-card.png" alt="">
+                <div class="datos-tarjeta">
+                    <h4>CVC:</h4>
+                    <h4 id="card-cvc">123</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <video id="video" autoplay loop muted>
+            <source src="/img/video.mp4" type="video/mp4">
+        </video>
+        <form action="" id="formulario" autocomplete="off">
+            <img id="logo-visa" src="/img/visa.png" alt="">
+            <div class="form-section">
+                <label for="">Name</label>
+                <input type="text" placeholder="Juan Pérez" id="name" name="name">
+            </div>
+            <div class="form-section">
+                <label for="">Card Number</label>
+                <input type="text" placeholder="0000000000000000" id="number" name="number">
+            </div>
+            <div id="" class="form-section ls" aria-colcount="">
+                <div class="lss">
+                    <label for="">Month</label>
+                    <input type="text" placeholder="01" id="month" name="month">
+                </div>
+                <div class="lss">
+                    <label for="">Year</label>
+                    <input type="text" placeholder="30" id="year" name="year">
+                </div>
+                <div class="lss">
+                    <label for="">CVC</label>
+                    <input type="text" placeholder="123" id="cvc" name="cvc">
+                </div>
+            </div>
+            <button type="submit">Confirm</button>
+        </form>
+        <p class="alert"></p>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>
