@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stiles.css">
+</head>
+
+<body class="grid-container">
+
+    <div id="sidebar">
+        <div id="card-container" class="carta-box">
+            <div class="carta">
+                <span id="card-front" class="cara">
+                    <span id="magnetic-logo-span">
+                        <img id="magnetic-logo" src="/img/contacto.png" alt="">
+                        <img id="visa-logo" src="/img/visa-logo-card.png" alt="">
+                    </span>
+                    <h2 id="card-number">0000000000000000</h2>
+                    <span id="card-info">
+                        <h3 id="card-name">Name</h3>
+                        <span id="span-month-year">
+                            <h3 id="card-month">00</h3> / <h3 id="card-year">00</h3>
+                        </span>
+                    </span>
+                </span>
+                <span id="card-back" class="cara detras">
+                    <h3 id="cvc-card">123</h3>
+                    <h3>___________</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <video autoplay muted loop id="video">
+            <source src="/img/video.mp4" type="video/mp4">
+        </video>
+        <form id="form" action="" autocomplete="off">
+            <img id="form-logo" src="/img/visa (1).png" alt="">
+            <div id="" class="label-box">
+                <label for="">Cardholder Name</label>
+                <input type="text" placeholder="ex. Nicolás Bauzá" id="name" name="name">
+                <p id="name-error"></p>
+            </div>
+            <div id="" class="label-box">
+                <label for="">Card Number</label>
+                <input type="text" placeholder="ex. 1234567891230000" id="card" name="card">
+                <p id="card-error"></p>
+            </div>
+            <div id="" class="label-box-bottom">
+                <span id="" class="label-span-bottom">
+                    <label for="">Month</label>
+                    <input type="text" placeholder="01" id="month" name="month">
+                    <p id="month-error"></p>
+                </span>
+                <span id="" class="label-span-bottom">
+                    <label for="">Year</label>
+                    <input type="text" placeholder="2029" id="year" name="year">
+                    <p id="year-error"></p>
+                </span>
+                <span id="" class="label-span-bottom">
+                    <label for="">CVC</label>
+                    <input type="text" placeholder="123" id="cvc" name="cvc">
+                    <p id="cvc-error"></p>
+                </span>
+            </div>
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+}
+
+.grid-container > * {
+  justify-content: center;
+  padding: 0 auto;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.719);
+  padding: auto;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "sidebar"
+    "main";
+}
+
+/*Sidebar Section:*/
+#sidebar {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: sidebar;
+  background: rgb(9, 9, 121);
+  background-color: rgb(159, 193, 223);
+  padding: 10px;
+}
+
+#card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#card-front {
+  width: 21.875em;
+  height: 12.5em;
+  background-image: url('./img/fondo\ tarjeta.jpg');
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  letter-spacing: 1px;
+  gap: 10px;
+}
+
+#card-back {
+  width: 21.875em;
+  height: 12.5em;
+  background-color: #bebdbd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  flex-direction: column;
+}
+
+#card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  width: 100%;
+}
+
+#magnetic-logo-span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#magnetic-logo {
+  height: 30px;
+}
+
+#visa-logo {
+  width: 60px;
+}
+
+#cvc-card {
+  background-color: rgb(168, 170, 170);
+  width: 150px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+/*Main Section:*/
+#main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/img/video.mp4");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+#video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("./img/video.mov") no-repeat;
+  background-size: cover;
+}
+
+#form {
+  width: 350px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  background-color: rgb(228, 224, 221);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+#form-logo {
+  width: 80px;
+}
+
+.label-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.label-box-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.label-span-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#span-month-year {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border: 1px rgba(128, 128, 128, 0.342) solid;
+  letter-spacing: 1px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(29, 95, 148);
+}
+
+button:hover {
+  background-color: rgb(64, 196, 64);
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.7s;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+p {
+  height: 10px;
+  color: red;
+  font-size: 10px;
+  height: 10px;
+}
+
+.swal-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Media Query ... adaptable al Iphone 12 Pro en vertical .. */
+
+@media (min-width: 1070px) {
+  .grid-container {
+    grid-template:
+      "sidebar main" 100% /
+      30% auto;
+  }
+}
+
+@media (max-width: 1070px) {
+  .grid-container {
+    grid-template:
+      "sidebar" 38%
+      "main" auto;
+  }
+}
+
+/*Clases*/
+
+.red {
+  border: solid 2px rgba(255, 0, 0, 0.685);
+}
+
+.green {
+  border: 2px solid rgba(0, 128, 0, 0.671);
+}
+
+/*Tarjeta giratoria*/
+
+.carta-box {
+  margin: 100px;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carta {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cara {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.cara.detras {
+  transform: rotateY(180deg);
+}
